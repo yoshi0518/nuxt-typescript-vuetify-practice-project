@@ -36,6 +36,7 @@ export default {
    ** Nuxt.js dev-modules
    */
   buildModules: [
+    '@nuxt/typescript-build',
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify'
@@ -81,6 +82,10 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config: any, ctx: any) {}
+  },
+  typescript: {
+    typeCheck: true,
+    ignoreNotFoundWarnings: true
   }
 }
